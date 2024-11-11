@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
 import MOCK_DATA from "../mock/MOCK_DATA";
-import PokemonCard from "./pokemonCard";
+import PokemonCard from "./PokemonCard";
 import styled from "styled-components";
 import { ContextApi } from "../shared/ContextApi";
 
-const PokemonList = () => {
   const PokeList = styled.ul`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     
   `;
+const PokemonList = () => {
 
   const {addPokemon}=useContext(ContextApi);
   return (
