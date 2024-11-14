@@ -43,7 +43,9 @@ const Dashboard = () => {
 
 
 const dispatch = useDispatch();
+
 const selectedPokemon = useSelector((state)=>state.pokemon);
+
 return (
   <>
   <h1>
