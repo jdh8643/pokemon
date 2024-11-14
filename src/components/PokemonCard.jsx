@@ -1,6 +1,8 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+import { addPokemon } from '../store/Slice' 
 
 const CardContainer =styled.div`
 display: flex;
@@ -21,9 +23,11 @@ a{display: flex;
   }
   `
   
-const PokemonCard = ({pokemon,addPokemon}) => {
+const PokemonCard = ({pokemon}) => {
 
   const navigate = useNavigate();
+
+  const dispatch = useDispatch();
 
   return (
     
@@ -39,7 +43,7 @@ const PokemonCard = ({pokemon,addPokemon}) => {
         <img src={pokemon.img_url} alt={pokemon.korean_name} />
         <p>{pokemon.korean_name}</p>
         <p>No. {pokemon.id}</p>
-        <button onClick={() => addPokemon(pokemon)}>추가</button>
+        <button onClick={() => dispatch(addPokemon(pokemon))}>추가</button>
       </a>
       </Card>
     </CardContainer>

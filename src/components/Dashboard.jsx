@@ -1,6 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { ContextApi } from '../shared/ContextApi';
+import { useDispatch, useSelector } from 'react-redux';
+import { deletePokemon } from '../store/Slice';
 
 
 const DashboardBox = styled.ul`
@@ -40,8 +41,9 @@ align-items: center;
 `
 const Dashboard = () => {
 
-const{selectedPokemon,deletePokemon}=useContext(ContextApi);
 
+const dispatch = useDispatch();
+const selectedPokemon = useSelector((state)=>state.pokemon);
 return (
   <>
   <h1>
@@ -55,7 +57,7 @@ return (
             <img src={pokemon.img_url} alt={pokemon.korean_name} />
             <p>{pokemon.korean_name}</p>
             <p>No. {pokemon.id}</p>
-            <button onClick={() => deletePokemon(pokemon.id)}>삭제</button>
+            <button onClick={() => dispatch(deletePokemon(pokemon.id))}>삭제</button>
           
         </SelectedPokemon>
       );
