@@ -3,7 +3,7 @@
 ## 프로젝트 개요
 - 포켓몬을 클릭하여 6마리를 선택할수있고, 포켓몬 상세 소개
 - 제작 기간 : 2024-11-6 ~ 2024-11-14
-- 배포 링크 : [https://jdh8643.github.io/moviess/](https://github.com/jdh8643/pokemon/)
+- 배포 링크 : 
 
 ## 기술스택
 <img src='https://images.velog.io/images/cyheum/post/a21ac839-e534-4eb3-8fa5-342a45818a53/react-logo.png'>
