@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 # pokemon
 # pokemon2
 # pokemon2
+# pokemon2
